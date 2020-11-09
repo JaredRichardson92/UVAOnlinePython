@@ -1,4 +1,4 @@
-grid = [][]
+global grid
 
 
 class Turtle:
@@ -36,8 +36,7 @@ class Turtle:
             self.dir = 'S'
 
     def moveForward(self):
-
-
+        return
 
 
 while True:
@@ -51,8 +50,6 @@ while True:
         inputLine = input().split()
         directions = input().split()
         turtle = Turtle(inputLine[0], inputLine[1], inputLine[2], directions)
-
-
 
     except EOFError:
         break
