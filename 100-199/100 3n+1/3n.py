@@ -1,5 +1,6 @@
 a = {}
 
+
 def calcCycle(x):
     if x in a:
         return a[x]
@@ -10,7 +11,7 @@ def calcCycle(x):
     else:
         y = (3 * x) + 1
 
-    a[x] =  calcCycle(y) + 1
+    a[x] = calcCycle(y) + 1
     return a[x]
 
 

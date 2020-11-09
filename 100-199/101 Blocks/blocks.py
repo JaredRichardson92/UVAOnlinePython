@@ -30,13 +30,13 @@ def processCommand(primaryCommand, movingBlock, secondaryCommand, destinationBlo
     if originPile == destinationPile:
         return
 
-    # move command indicates to clear off top of origin block before moving
+    # 'move' command indicates to clear off top of origin block before moving
     if primaryCommand == "move":
         while int(workArea[int(originPile)].contents[-1]) != int(movingBlock):
             tempBlock = workArea[int(originPile)].contents.pop()
             workArea[int(tempBlock)].contents.append(tempBlock)
 
-    # onto secondary command indicates to clear off top of destination block before moving
+    # 'onto' secondary command indicates to clear off top of destination block before moving
     if secondaryCommand == "onto":
         while int(workArea[int(destinationPile)].contents[-1]) != int(destinationBlock):
             tempBlock = workArea[int(destinationPile)].contents.pop()
