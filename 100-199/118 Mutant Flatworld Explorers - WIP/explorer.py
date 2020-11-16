@@ -43,7 +43,7 @@ while True:
     x, y = map(int, input().split())
     grid = [x][y + 1]
     for i in range(0, x):
-        for j in range(0, j):
+        for j in range(0, y):
             grid[i][j] = None
 
     try:
