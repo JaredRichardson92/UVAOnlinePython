@@ -14,10 +14,9 @@ def main():
                 var = instructions[int(inst[2]) - 1]
                 if var == 'L':
                     location -= 1
-                    instructions.append('L')
                 elif var == 'R':
                     location += 1
-                    instructions.append('R')
+                instructions.append(var)
 
         print(str(location))
 
