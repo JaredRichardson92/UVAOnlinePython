@@ -3,15 +3,15 @@ def main():
         location = 0
         instructions = []
         for i in range(int(input())):
-            inst = input().strip()
-            if inst[0] == 'L':
+            inst = input().strip().split()
+            if inst[0] == 'LEFT':
                 location -= 1
                 instructions.append('L')
-            elif inst[0] == 'R':
+            elif inst[0] == 'RIGHT':
                 location += 1
                 instructions.append('R')
             else:
-                var = instructions[int(inst.split()[2]) - 1]
+                var = instructions[int(inst[2]) - 1]
                 if var == 'L':
                     location -= 1
                     instructions.append('L')
