@@ -7,9 +7,9 @@ def main():
             break
 
         for i in range(hotels):
-            #Calculate lowest cost for each hotel
+            # Calculate lowest cost for each hotel
             perPerson = int(input())
-            availRooms = input().split() 
+            availRooms = input().split()
             if perPerson * participants > budget:
                 continue
             for room in availRooms:
@@ -18,13 +18,10 @@ def main():
                 if participants * perPerson < cheapest:
                     cheapest = participants * perPerson
 
-
         if cheapest == 1000000:
             print("stay home")
         else:
             print(str(cheapest))
-
-
 
 
 if __name__ == "__main__":
