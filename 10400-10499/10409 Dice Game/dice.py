@@ -1,6 +1,3 @@
-steps = int(input())
-
-
 def north():
     temp = sides["t"]
     sides["t"] = sides["s"]
@@ -33,6 +30,7 @@ def west():
     sides["w"] = temp
 
 
+steps = int(input())
 while steps != 0:
     # Dice Faces Top, North, West, South, East, Bottom
     sides = {"t": 1, "n": 2, "w": 3, "s": 5, "e": 4, "b": 6}
