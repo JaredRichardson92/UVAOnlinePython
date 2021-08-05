@@ -33,7 +33,7 @@ def west():
 steps = int(input())
 while steps != 0:
     # Dice Faces Top, North, West, South, East, Bottom
-    sides = {"t": 1, "n": 2, "w": 3, "s": 5, "e": 4, "b": 6}
+    sides = {"t": "1", "n": "2", "w": "3", "s": "5", "e": "4", "b": "6"}
     for _ in range(steps):
         direction = input()[0]
         if direction == "n":
@@ -45,5 +45,5 @@ while steps != 0:
         else:
             west()
 
-    print(str(sides["t"]))
+    print(sides["t"])
     steps = int(input())
