@@ -10,8 +10,6 @@ def main():
             s = 0
             w = 0
             tempPass = passcode.copy()
-            # print(len(tempPass))
-            # print(len(attempt))
 
             for i in range(len(attempt)):
                 if attempt[i] == tempPass[i]:
@@ -21,7 +19,7 @@ def main():
 
             for i in range(len(attempt)):
                 if attempt[i] in tempPass and attempt[i] != 0:
-                    tempPass.pop(tempPass.index(attempt[i]))
+                    tempPass[tempPass.index(attempt[i])] = 0
                     w += 1
 
             print("    ({},{})".format(str(s), str(w)))
